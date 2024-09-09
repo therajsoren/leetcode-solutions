@@ -7,7 +7,7 @@ void printName(int i, int n) {
     if (i > n) return;
     cout << "Raj Soren" << endl;
     printName(i + 1, n); 
-
+}
 int main() {
     int n;
     cin >> n;
