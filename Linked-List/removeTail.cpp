@@ -45,11 +45,10 @@ Node * deleteTail(Node * head){
         return NULL;
     }
     Node * temp = head;
-    while(temp->next->next != NULL){
+    while(temp){
         temp = temp->next;
     }
-    temp->next = NULL;
-    delete temp->next;
+    delete temp;
     return head;
 }
 int main() {
