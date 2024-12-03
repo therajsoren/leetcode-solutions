@@ -40,20 +40,22 @@ void print(Node * head){
     cout << endl;
 }
 
-Node * removeKthNode(Node * head,int value){
+Node * removeKthNode(Node * head,int k){
     if(head == NULL){
         return head;
     }
-   if(head->data == value){
+   if(k == 1){
     Node * temp = head;
     head = head->next;
     delete temp;
     return head;
    }
+   int cnt = 0;
    Node * temp = head;
    Node * prev = NULL;
    while(temp != NULL){
-    if(temp->data == value){
+    cnt++;
+    if(cnt == k){
         prev->next = prev->next->next;
         delete temp;
         break;
@@ -67,7 +69,7 @@ int main() {
   vector<int> arr = {2,5,8,7};
   Node *head = convertArrToLL(arr);
 //   cout << head->data;
-  int value = 2;
-  head = removeKthNode(head,value);
+  int k = 2;
+  head = removeKthNode(head,k);
   print(head);
 }
