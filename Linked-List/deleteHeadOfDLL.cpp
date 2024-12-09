@@ -32,6 +32,9 @@ Node * convertArr2DLL(vector<int> & arr){
     return head;
 }
 Node *deleteHead(Node * head){
+    if(!head || !head->next){
+        return NULL;
+    }
     Node * prev = head;
     head = head->next;
     head->back = NULL;
