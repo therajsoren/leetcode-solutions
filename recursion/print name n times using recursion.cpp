@@ -12,6 +12,6 @@ void printName(int cnt, int n) {
 int main() {
     int n;
     cin >> n;
-    printName(0, n); // Start with i = 1
+    printName(0, n); 
     return 0;
 }
